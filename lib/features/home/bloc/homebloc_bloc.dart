@@ -6,8 +6,6 @@ part 'homebloc_state.dart';
 
 class HomeblocBloc extends Bloc<HomeblocEvent, HomeblocState> {
   HomeblocBloc() : super(HomeblocInitial()) {
-    on<HomeblocEvent>((event, emit) {
-      // TODO: implement event handler
-    });
+    on<HomeProductWishlistButtonClickEvent>(HomePro);
   }
 }

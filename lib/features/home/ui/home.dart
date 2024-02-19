@@ -26,8 +26,16 @@ class _HomeState extends State<Home> {
           appBar: AppBar(
             title: Text("Grocery Store"),
             actions: [
-              IconButton(onPressed: () {}, icon: Icon(Icons.favorite)),
-              IconButton(onPressed: () {}, icon: Icon(Icons.shopping_bag))
+              IconButton(
+                  onPressed: () {
+                    homeblocBloc.add(HomeWishlistButtonNevigateEvent());
+                  },
+                  icon: Icon(Icons.favorite)),
+              IconButton(
+                  onPressed: () {
+                    homeblocBloc.add(HomeProductCartButtonClickEvent());
+                  },
+                  icon: Icon(Icons.shopping_bag))
             ],
           ),
         );
