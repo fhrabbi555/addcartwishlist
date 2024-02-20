@@ -1,7 +1,9 @@
 part of 'homebloc_bloc.dart';
 
 @immutable
-sealed class HomeblocEvent {}
+ abstract class HomeblocEvent {   
+}
+class HomeInitialEvent extends HomeblocEvent{}
 
 class HomeProductWishlistButtonClickEvent extends HomeblocEvent{
 
